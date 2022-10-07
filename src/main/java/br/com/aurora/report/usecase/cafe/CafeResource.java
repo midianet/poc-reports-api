@@ -1,6 +1,6 @@
 package br.com.aurora.report.usecase.cafe;
 
-import br.com.aurora.report.helper.ReportHelper;
+import br.com.aurora.report.helper.JasperHelper;
 import br.com.aurora.report.model.Report;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +17,7 @@ public class CafeResource {
     private final CafeService service;
 
     @GetMapping
-    public ResponseEntity<byte[]> generate(@RequestParam(name = "type", required = false, defaultValue = ReportHelper.DEFAULT_TYPE) final Report.Type type,
+    public ResponseEntity<byte[]> generate(@RequestParam(name = "type", required = false, defaultValue = JasperHelper.DEFAULT_TYPE) final Report.Type type,
                                            @RequestParam(name = "titulo") final String titulo,
                                            HttpServletResponse response){
         final var report = service.buildReport(type,titulo);

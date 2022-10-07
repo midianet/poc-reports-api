@@ -1,6 +1,6 @@
 package br.com.aurora.report.usecase.cafe;
 
-import br.com.aurora.report.helper.ReportHelper;
+import br.com.aurora.report.helper.JasperHelper;
 import br.com.aurora.report.model.Report;
 import lombok.RequiredArgsConstructor;
 import org.springframework.lang.NonNull;
@@ -18,9 +18,9 @@ public class CafeService {
                               @NonNull String titulo){
         final var params = new HashMap<String,Object>();
         params.put("titulo", titulo ); //"Relatório do Café - Aurora"
-        params.put("logo", ReportHelper.getImage("/static/cafe.jpg"));
+        params.put("logo", JasperHelper.getImage("/static/cafe.jpg"));
         return Report.builder()
-            .body(ReportHelper.makeReport(type, "ranking_cafe", params, repository.list()))
+            .body(JasperHelper.makeReport(type, "ranking_cafe", params, repository.list()))
             .type(type.getMediaType())
             .filename("cafe")
             .build();

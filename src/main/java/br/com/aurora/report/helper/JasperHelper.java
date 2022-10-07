@@ -4,10 +4,7 @@ import br.com.aurora.report.model.Report;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.engine.export.*;
-import net.sf.jasperreports.export.SimpleCsvMetadataExporterConfiguration;
-import net.sf.jasperreports.export.SimpleExporterInput;
-import net.sf.jasperreports.export.SimpleOutputStreamExporterOutput;
-import net.sf.jasperreports.export.SimpleWriterExporterOutput;
+import net.sf.jasperreports.export.*;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.lang.NonNull;
 
@@ -19,10 +16,10 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.Objects;
 
-public final class ReportHelper {
+public final class JasperHelper {
 	public final static String DEFAULT_TYPE = "PDF";
 
-	private ReportHelper() {
+	private JasperHelper() {
 	}
 
 	public static byte[] makeReport(@NonNull final Report.Type type, @NonNull final String filename, @NonNull final Map<String, Object> params, @NonNull final Collection data) {
@@ -57,11 +54,11 @@ public final class ReportHelper {
 
 	private static byte[] exportCsv(final JasperPrint print) throws JRException {
 		final var output = new ByteArrayOutputStream();
-		final var exporter = new JRCsvMetadataExporter();
-		final var configuration = new SimpleCsvMetadataExporterConfiguration();
+		final var exporter = new JRCsvExporter();
+		final var configuration = new SimpleCsvExporterConfiguration();
+		exporter.setConfiguration(configuration);
 		exporter.setExporterInput(new SimpleExporterInput(print));
 		exporter.setExporterOutput(new SimpleWriterExporterOutput(output));
-		exporter.setConfiguration(configuration);
 		exporter.exportReport();
 		return output.toByteArray();
 	}
@@ -69,9 +66,13 @@ public final class ReportHelper {
 	private static byte[] exportXls(final JasperPrint print) throws JRException {
 		final var output = new ByteArrayOutputStream();
 		final var exporter = new JRXlsExporter();
+		final var configuration = new SimpleXlsReportConfiguration();
+		configuration.setOnePagePerSheet(true);
+		configuration.setRemoveEmptySpaceBetweenRows(false);
+		configuration.setDetectCellType(true);
+		configuration.setWhitePageBackground(false);
+		exporter.setConfiguration(configuration);
 		//exporter.setParameter(JRXlsExporterParameter.IS_REMOVE_EMPTY_SPACE_BETWEEN_ROWS, Boolean.TRUE);
-		//exporter.setParameter(JRXlsExporterParameter.IS_WHITE_PAGE_BACKGROUND, Boolean.FALSE);
-		//exporter.setParameter(JRXlsExporterParameter.IS_DETECT_CELL_TYPE, Boolean.TRUE);
 		exporter.setExporterInput(new SimpleExporterInput(print));
 		exporter.setExporterOutput(new SimpleOutputStreamExporterOutput(output));
 		exporter.exportReport();
@@ -89,7 +90,7 @@ public final class ReportHelper {
 //
     public static BufferedImage getImage(final String filePath) {
 		try {
-			return ImageIO.read(ReportHelper.class.getResource(filePath));
+			return ImageIO.read(JasperHelper.class.getResource(filePath));
 		} catch (IOException e) {
 			throw new RuntimeException(e.getMessage(), e);
 		}
