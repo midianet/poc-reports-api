@@ -17,7 +17,7 @@ public class Logr0103Resource {
     private final Logr0103Service service;
 
     @GetMapping
-    public ResponseEntity<byte[]> generate(@RequestParam(name = "type", required = false, defaultValue = JasperHelper.DEFAULT_TYPE) final Report.Type type,
+    public ResponseEntity<Object> generate(@RequestParam(name = "type", required = false, defaultValue = JasperHelper.DEFAULT_TYPE) final Report.Type type,
                                            @RequestParam(name = "cargaId") final Integer cargaId,
                                            @RequestParam(name = "itemOrdPickId") final Integer itemOrdPickId,
                                            HttpServletResponse response){

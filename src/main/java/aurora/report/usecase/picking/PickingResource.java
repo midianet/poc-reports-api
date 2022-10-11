@@ -17,7 +17,7 @@ public class PickingResource {
     private final PickingService service;
 
     @GetMapping
-    public ResponseEntity<byte[]> generate(@RequestParam(name = "type", required = false, defaultValue = JasperHelper.DEFAULT_TYPE) final Report.Type type,
+    public ResponseEntity<Object> generate(@RequestParam(name = "type", required = false, defaultValue = JasperHelper.DEFAULT_TYPE) final Report.Type type,
                                            @RequestParam(name = "nrCarga") Integer nrCarga,
                                            @RequestParam(name = "unidOrigem") Integer unidOrigem,
                                            HttpServletResponse response){

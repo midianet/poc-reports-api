@@ -88,7 +88,7 @@ public class Logr0103Repository {
                   from logr0103_temp tmp
                   where tmp.cd_locallog_dest is not null
                     and tmp.cargsaida_id = :cargaId
-                """, Map.of("cargsaida_id", cargaId), rowMapperOrdem);
+                """, Map.of("cargaId", cargaId), rowMapperOrdem);
     }
 
     private RowMapper<Ordem> rowMapperOrdem = (rs, rowNum) ->

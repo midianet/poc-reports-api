@@ -22,7 +22,7 @@ public final class JasperHelper {
 	private JasperHelper() {
 	}
 
-	public static byte[] makeReport(@NonNull final Report.Type type, @NonNull final String filename, @NonNull final Map<String, Object> params, @NonNull final Collection data) {
+	public static Object makeReport(@NonNull final Report.Type type, @NonNull final String filename, @NonNull final Map<String, Object> params, @NonNull final Collection data) {
 		try {
 			final var report = JasperFillManager.fillReport(new ClassPathResource(String.format("/jasper/%s.jasper"
 							, filename))
@@ -32,6 +32,7 @@ public final class JasperHelper {
 				case PDF -> exportPdf(report);
 				case CSV -> exportCsv(report);
 				case XLS -> exportXls(report);
+				case JSON -> data;
 				default -> throw new RuntimeException("Tipo Relatório Inválido");
 			};
 		}catch (IOException | JRException e){

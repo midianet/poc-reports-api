@@ -19,8 +19,13 @@ public class Rel001Service {
                               @NonNull Integer clienteId,
                               @NonNull  String cep){
         final var params = new HashMap<String,Object>();
+        final var data = buildData(clienteId, cep);
+        final var body =  Report.Type.JSON.equals(type)
+            ? data
+            : JasperHelper.makeReport(type, "picking", params, List.of(data));
+
         return Report.builder()
-                .body(JasperHelper.makeReport(type, "picking", params, List.of(buildData(clienteId, cep))))
+                .body(body)
                 .type(type.getMediaType())
                 .filename("picking")
                 .build();

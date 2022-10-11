@@ -17,7 +17,7 @@ public class Rel001Resource {
     private final Rel001Service service;
 
     @GetMapping
-    public ResponseEntity<byte[]> generate(@RequestParam(name = "type", required = false, defaultValue = JasperHelper.DEFAULT_TYPE) final Report.Type type,
+    public ResponseEntity<Object> generate(@RequestParam(name = "type", required = false, defaultValue = JasperHelper.DEFAULT_TYPE) final Report.Type type,
                                            @RequestParam(name = "clienteId") final Integer clienteId,
                                            @RequestParam(name = "cep") final String cep,
                                            HttpServletResponse response){

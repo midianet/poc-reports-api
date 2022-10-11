@@ -17,7 +17,7 @@ public class CafeResource {
     private final CafeService service;
 
     @GetMapping
-    public ResponseEntity<byte[]> generate(@RequestParam(name = "type", required = false, defaultValue = JasperHelper.DEFAULT_TYPE) final Report.Type type,
+    public ResponseEntity<Object> generate(@RequestParam(name = "type", required = false, defaultValue = JasperHelper.DEFAULT_TYPE) final Report.Type type,
                                            @RequestParam(name = "titulo") final String titulo,
                                            HttpServletResponse response){
         final var report = service.buildReport(type,titulo);

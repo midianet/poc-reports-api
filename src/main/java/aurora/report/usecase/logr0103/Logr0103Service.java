@@ -43,7 +43,6 @@ public class Logr0103Service {
     public Report buildReport(@NonNull Report.Type type,
                               @NonNull Integer cargaId,
                               @NonNull Integer itemOrdPickId){
-
         final var params = new HashMap<String,Object>();
         return Report.builder()
                 .body(JasperHelper.makeReport(type, "logr0103", params, List.of(buildData(cargaId, itemOrdPickId))))
