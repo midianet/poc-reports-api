@@ -29,8 +29,10 @@ public class Rel001Service {
 
     private Rel001Model buildData(@NonNull final Integer clienteId,
                                         @NonNull final String cep){
+
         final var pessoa = repository.findPessoa(clienteId)
                 .orElseThrow(() -> new BusinessException("Pessoa não econtrada"));
+
         final var endereco =repository.findEndereco(cep)
                 .orElse(Endereco.builder()
                     .logradouro("nao informado")
