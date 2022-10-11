@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="logr0103" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="56850cf1-ac47-44fb-8daa-8bb561da65f3">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Homolog Aurora"/>
+	<queryString language="SQL">
+		<![CDATA[select
+*
+from logr0103_temp]]>
+	</queryString>
+	<field name="CARGSAIDA_ID" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="CARGSAIDA_ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="CARGSAIDA_ID"/>
+	</field>
+	<field name="CD_CARROCVEIC" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="CD_CARROCVEIC"/>
+		<property name="com.jaspersoft.studio.field.label" value="CD_CARROCVEIC"/>
+	</field>
+	<field name="CD_LOCALLOG_ORIG" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="CD_LOCALLOG_ORIG"/>
+		<property name="com.jaspersoft.studio.field.label" value="CD_LOCALLOG_ORIG"/>
+	</field>
+	<field name="DESCR_LOCALLOG_ORIG" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DESCR_LOCALLOG_ORIG"/>
+		<property name="com.jaspersoft.studio.field.label" value="DESCR_LOCALLOG_ORIG"/>
+	</field>
+	<field name="PLACA_CARROCVEIC" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PLACA_CARROCVEIC"/>
+		<property name="com.jaspersoft.studio.field.label" value="PLACA_CARROCVEIC"/>
+	</field>
+	<field name="CD_TPCARSAI" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="CD_TPCARSAI"/>
+		<property name="com.jaspersoft.studio.field.label" value="CD_TPCARSAI"/>
+	</field>
+	<field name="DESCR_TPCARSAI" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DESCR_TPCARSAI"/>
+		<property name="com.jaspersoft.studio.field.label" value="DESCR_TPCARSAI"/>
+	</field>
+	<field name="NOME_TRANPORTA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NOME_TRANPORTA"/>
+		<property name="com.jaspersoft.studio.field.label" value="NOME_TRANPORTA"/>
+	</field>
+	<field name="CD_TPCONSCARG" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="CD_TPCONSCARG"/>
+		<property name="com.jaspersoft.studio.field.label" value="CD_TPCONSCARG"/>
+	</field>
+	<field name="DESCR_TPCONSCARG" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DESCR_TPCONSCARG"/>
+		<property name="com.jaspersoft.studio.field.label" value="DESCR_TPCONSCARG"/>
+	</field>
+	<field name="CAPAC_PALETE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="CAPAC_PALETE"/>
+		<property name="com.jaspersoft.studio.field.label" value="CAPAC_PALETE"/>
+	</field>
+	<field name="TEMPER_MIN" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="TEMPER_MIN"/>
+		<property name="com.jaspersoft.studio.field.label" value="TEMPER_MIN"/>
+	</field>
+	<field name="TEMPER_MAX" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="TEMPER_MAX"/>
+		<property name="com.jaspersoft.studio.field.label" value="TEMPER_MAX"/>
+	</field>
+	<field name="CAPAC_CARGA" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="CAPAC_CARGA"/>
+		<property name="com.jaspersoft.studio.field.label" value="CAPAC_CARGA"/>
+	</field>
+	<field name="CD_TPMOVPROTV" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="CD_TPMOVPROTV"/>
+		<property name="com.jaspersoft.studio.field.label" value="CD_TPMOVPROTV"/>
+	</field>
+	<field name="DESCR_TPMOVPROTV" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DESCR_TPMOVPROTV"/>
+		<property name="com.jaspersoft.studio.field.label" value="DESCR_TPMOVPROTV"/>
+	</field>
+	<field name="EMBARQ_RETIRADA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="EMBARQ_RETIRADA"/>
+		<property name="com.jaspersoft.studio.field.label" value="EMBARQ_RETIRADA"/>
+	</field>
+	<field name="SEQ_CARGA" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="SEQ_CARGA"/>
+		<property name="com.jaspersoft.studio.field.label" value="SEQ_CARGA"/>
+	</field>
+	<field name="NRO_CONTAINER" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NRO_CONTAINER"/>
+		<property name="com.jaspersoft.studio.field.label" value="NRO_CONTAINER"/>
+	</field>
+	<field name="PAYLOAD" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="PAYLOAD"/>
+		<property name="com.jaspersoft.studio.field.label" value="PAYLOAD"/>
+	</field>
+	<field name="CD_LOCALLOG_DEST" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="CD_LOCALLOG_DEST"/>
+		<property name="com.jaspersoft.studio.field.label" value="CD_LOCALLOG_DEST"/>
+	</field>
+	<field name="DESCR_LOCALLOG_DEST" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DESCR_LOCALLOG_DEST"/>
+		<property name="com.jaspersoft.studio.field.label" value="DESCR_LOCALLOG_DEST"/>
+	</field>
+	<field name="CD_ORDEMPICK" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CD_ORDEMPICK"/>
+		<property name="com.jaspersoft.studio.field.label" value="CD_ORDEMPICK"/>
+	</field>
+	<field name="CD_LOCALLOG_DESC" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="CD_LOCALLOG_DESC"/>
+		<property name="com.jaspersoft.studio.field.label" value="CD_LOCALLOG_DESC"/>
+	</field>
+	<field name="DESCR_LOCALLOG_DESC" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DESCR_LOCALLOG_DESC"/>
+		<property name="com.jaspersoft.studio.field.label" value="DESCR_LOCALLOG_DESC"/>
+	</field>
+	<field name="NRO_PED_FATUR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="NRO_PED_FATUR"/>
+		<property name="com.jaspersoft.studio.field.label" value="NRO_PED_FATUR"/>
+	</field>
+	<field name="OBS_PED_FATUR" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="OBS_PED_FATUR"/>
+		<property name="com.jaspersoft.studio.field.label" value="OBS_PED_FATUR"/>
+	</field>
+	<field name="ITMORDPICK_ID" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="ITMORDPICK_ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="ITMORDPICK_ID"/>
+	</field>
+	<field name="CD_ITEM" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="CD_ITEM"/>
+		<property name="com.jaspersoft.studio.field.label" value="CD_ITEM"/>
+	</field>
+	<field name="DESCR_ITEM" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DESCR_ITEM"/>
+		<property name="com.jaspersoft.studio.field.label" value="DESCR_ITEM"/>
+	</field>
+	<field name="SHELF_ITEM" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="SHELF_ITEM"/>
+		<property name="com.jaspersoft.studio.field.label" value="SHELF_ITEM"/>
+	</field>
+	<field name="QTDE_EMB_ITEM" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="QTDE_EMB_ITEM"/>
+		<property name="com.jaspersoft.studio.field.label" value="QTDE_EMB_ITEM"/>
+	</field>
+	<field name="QTDE_ITEM" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="QTDE_ITEM"/>
+		<property name="com.jaspersoft.studio.field.label" value="QTDE_ITEM"/>
+	</field>
+	<field name="TEMPER_1" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="TEMPER_1"/>
+		<property name="com.jaspersoft.studio.field.label" value="TEMPER_1"/>
+	</field>
+	<field name="TEMPER_2" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="TEMPER_2"/>
+		<property name="com.jaspersoft.studio.field.label" value="TEMPER_2"/>
+	</field>
+	<field name="TEMPER_3" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="TEMPER_3"/>
+		<property name="com.jaspersoft.studio.field.label" value="TEMPER_3"/>
+	</field>
+	<field name="CD_PALLET" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CD_PALLET"/>
+		<property name="com.jaspersoft.studio.field.label" value="CD_PALLET"/>
+	</field>
+	<field name="CD_LOTE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CD_LOTE"/>
+		<property name="com.jaspersoft.studio.field.label" value="CD_LOTE"/>
+	</field>
+	<field name="SHELF_LOTE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="SHELF_LOTE"/>
+		<property name="com.jaspersoft.studio.field.label" value="SHELF_LOTE"/>
+	</field>
+	<field name="CD_LOCFISDEPO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CD_LOCFISDEPO"/>
+		<property name="com.jaspersoft.studio.field.label" value="CD_LOCFISDEPO"/>
+	</field>
+	<field name="QTDE_EMB_ITEM_RES" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="QTDE_EMB_ITEM_RES"/>
+		<property name="com.jaspersoft.studio.field.label" value="QTDE_EMB_ITEM_RES"/>
+	</field>
+	<field name="QTDE_ITEM_RES" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="QTDE_ITEM_RES"/>
+		<property name="com.jaspersoft.studio.field.label" value="QTDE_ITEM_RES"/>
+	</field>
+	<field name="CD_BARRA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CD_BARRA"/>
+		<property name="com.jaspersoft.studio.field.label" value="CD_BARRA"/>
+	</field>
+	<field name="OBRIG" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="OBRIG"/>
+		<property name="com.jaspersoft.studio.field.label" value="OBRIG"/>
+	</field>
+	<field name="TOT_ORIGEM" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="TOT_ORIGEM"/>
+		<property name="com.jaspersoft.studio.field.label" value="TOT_ORIGEM"/>
+	</field>
+	<field name="NRO_PLANO_EMBARQ" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NRO_PLANO_EMBARQ"/>
+		<property name="com.jaspersoft.studio.field.label" value="NRO_PLANO_EMBARQ"/>
+	</field>
+	<field name="PESO_BRUTO_CARROC" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="PESO_BRUTO_CARROC"/>
+		<property name="com.jaspersoft.studio.field.label" value="PESO_BRUTO_CARROC"/>
+	</field>
+	<field name="NOME_CLIE_CONTRATO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NOME_CLIE_CONTRATO"/>
+		<property name="com.jaspersoft.studio.field.label" value="NOME_CLIE_CONTRATO"/>
+	</field>
+	<field name="DESCR_PAISES" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DESCR_PAISES"/>
+		<property name="com.jaspersoft.studio.field.label" value="DESCR_PAISES"/>
+	</field>
+	<field name="CONTRAMARCA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CONTRAMARCA"/>
+		<property name="com.jaspersoft.studio.field.label" value="CONTRAMARCA"/>
+	</field>
+	<field name="NOME_CLIE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NOME_CLIE"/>
+		<property name="com.jaspersoft.studio.field.label" value="NOME_CLIE"/>
+	</field>
+	<field name="CIDADE_CLIE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CIDADE_CLIE"/>
+		<property name="com.jaspersoft.studio.field.label" value="CIDADE_CLIE"/>
+	</field>
+	<field name="UF_CLIE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="UF_CLIE"/>
+		<property name="com.jaspersoft.studio.field.label" value="UF_CLIE"/>
+	</field>
+	<field name="NOME_TRANSPORTA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NOME_TRANSPORTA"/>
+		<property name="com.jaspersoft.studio.field.label" value="NOME_TRANSPORTA"/>
+	</field>
+	<field name="ORDEM_PALLET" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="ORDEM_PALLET"/>
+		<property name="com.jaspersoft.studio.field.label" value="ORDEM_PALLET"/>
+	</field>
+	<field name="ORDEM_LOCFISDEPO" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="ORDEM_LOCFISDEPO"/>
+		<property name="com.jaspersoft.studio.field.label" value="ORDEM_LOCFISDEPO"/>
+	</field>
+	<field name="CD_TPSITLESTV" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="CD_TPSITLESTV"/>
+		<property name="com.jaspersoft.studio.field.label" value="CD_TPSITLESTV"/>
+	</field>
+	<variable name="QTDE_EMB_ITEM_RES1" class="java.math.BigDecimal" resetType="Group" resetGroup="Item" calculation="Sum">
+		<variableExpression><![CDATA[$F{QTDE_EMB_ITEM_RES}]]></variableExpression>
+	</variable>
+	<variable name="QTDE_ITEM_RES1" class="java.math.BigDecimal" resetType="Group" resetGroup="Item" calculation="Sum">
+		<variableExpression><![CDATA[$F{QTDE_ITEM_RES}]]></variableExpression>
+	</variable>
+	<group name="Carga">
+		<groupExpression><![CDATA[$F{CARGSAIDA_ID}]]></groupExpression>
+		<groupHeader>
+			<band height="93">
+				<textField>
+					<reportElement x="97" y="1" width="100" height="11" uuid="a0f6022d-ac94-4ced-a820-6aab2e912e83">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{CARGSAIDA_ID}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="1" width="95" height="11" uuid="ac9d5473-4a59-4f01-a807-44b3f68d230d">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[NRO CARGA.............:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="13" width="95" height="11" uuid="eb332393-cd29-46f7-96cd-f06159a19b30">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[ORIGEM....................:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="97" y="13" width="30" height="11" uuid="56ecb080-e406-4a2b-8f40-4590b2c5c5f7">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{CD_LOCALLOG_ORIG}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="127" y="13" width="180" height="11" uuid="63c02850-9eb6-40e4-8fcd-61dacf2c42f5">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{DESCR_LOCALLOG_ORIG}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="25" width="95" height="11" uuid="44a5b2c7-0380-4f22-9446-434b351fdb7a">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[TIPO CARGA............:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="97" y="25" width="30" height="11" uuid="7492b169-35cc-4bd8-8de7-db4db347fa66"/>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{CD_TPCARSAI}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="127" y="25" width="180" height="11" uuid="1b562cf3-92ce-4918-8fa7-79d6ab1c4ac8"/>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{DESCR_TPCARSAI}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="37" width="95" height="11" uuid="af824d6f-105a-47ee-9bb8-05de3d3a9c9c">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[TP CONSERV CARGA....:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="97" y="37" width="30" height="11" uuid="3cd12139-6c5f-45e8-8410-e6db1fe0195d">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{CD_TPCONSCARG}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="127" y="37" width="180" height="11" uuid="07fbea8e-b462-4c47-8f2e-f4ed8f94a625"/>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{DESCR_TPCONSCARG}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="49" width="95" height="11" uuid="11a1a4c9-38f2-4f28-aa39-5912a305329a">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[FAIXA TEMPERATURA...:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="97" y="49" width="30" height="11" uuid="2b4e2a56-6e76-4f80-886b-30688bfd2694"/>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{TEMPER_MIN}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="130" y="49" width="30" height="11" uuid="a404d82a-b119-40b7-894f-47a9ec67bf1c"/>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{TEMPER_MAX}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="61" width="95" height="11" uuid="356e04dd-e3c2-492d-96e3-5f7fedad9274">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[TIPO CARREGAMENTO.:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="97" y="61" width="210" height="11" uuid="d87b1bcd-65c3-4e45-a03e-2cc98353d90c"/>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{DESCR_TPMOVPROTV}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="73" width="95" height="11" uuid="6acdba3e-3880-4d9f-85b6-6306a3aafa52">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[SEQUENCIA COLETA.....:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="97" y="73" width="33" height="11" uuid="cb70393a-83c2-4f39-9e29-8d6e7cf991fa"/>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{SEQ_CARGA}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="130" y="73" width="100" height="11" uuid="9645c483-e0dd-4204-8acd-b400e8004a4f"/>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{TOT_ORIGEM}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="322" y="1" width="108" height="11" uuid="d268de24-4bcf-4996-9be5-cf2e80f4c517">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[FROTA...................................:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="322" y="13" width="108" height="11" uuid="1ce8a469-39a5-447e-97e5-d94d5d9f0ac7">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[PLACA CARRETA.................:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="322" y="25" width="108" height="11" uuid="ece9fd3f-2d6a-47f7-809b-e7887307943e">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[TRANSPORTADOR..............:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="322" y="37" width="108" height="11" uuid="a39352ab-c1de-451b-86e3-9167e9913b9a">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[CAP. VEIC. PALETES...........:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="322" y="49" width="108" height="11" uuid="6a222cde-64f1-4ccf-8741-59aa8bccbe79">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[CAP. VEIC. PESO.................:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="322" y="61" width="108" height="11" uuid="668bef87-8b6b-4e2b-998f-295a4fd0fcdd">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[EMBARQUE / RETIRA..........:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="430" y="1" width="125" height="11" uuid="4f27e3f6-342f-46c6-8cc4-d2d410ff40d8">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{CD_CARROCVEIC}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="430" y="13" width="125" height="11" uuid="45727f78-bf76-48bf-aaf3-397216e0e245">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{PLACA_CARROCVEIC}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="430" y="25" width="125" height="11" uuid="aaecdfcb-61a9-485b-a950-9b30dd356b55">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{NOME_TRANPORTA}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="430" y="37" width="125" height="11" uuid="4ae7ede1-8f26-48b9-bfdf-f1ca3954c9e3">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{CAPAC_PALETE}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="430" y="49" width="125" height="11" uuid="57a01ead-886b-4937-ad39-31e3a99310fc">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{PESO_BRUTO_CARROC}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="430" y="61" width="125" height="11" uuid="b611476a-0257-4318-afe4-7490be262584">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMBARQ_RETIRADA}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="Ordem">
+		<groupExpression><![CDATA[$F{CD_ORDEMPICK}]]></groupExpression>
+		<groupHeader>
+			<band height="24">
+				<textField>
+					<reportElement x="97" y="10" width="100" height="11" uuid="0bf1e741-52f9-4c37-bab3-0303474be55f">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{CD_LOCALLOG_DEST}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="10" width="95" height="11" uuid="fe0de67c-76ea-4c59-bd8f-b5f098256320">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[LOCAL DESCARGA........:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="270" y="10" width="110" height="11" uuid="4eb84bd5-2836-4685-9176-ae10dca75b59">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{CD_ORDEMPICK}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="270" y="0" width="110" height="11" uuid="715b5f17-967f-45a5-b853-565aa3d015b8">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[ORDEM PICKING]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="Item">
+		<groupExpression><![CDATA[$F{CD_ITEM}]]></groupExpression>
+		<groupHeader>
+			<band height="33">
+				<textField>
+					<reportElement x="97" y="4" width="283" height="11" uuid="4b73a246-c18b-4add-b07a-3d02b1cd06af">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{DESCR_ITEM}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="1" y="4" width="95" height="11" uuid="3ca9ba6a-0ab1-4a71-aa0b-597d45d8eac1"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[DESCRICAO ITEM..........:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="20" width="30" height="11" uuid="cd86c035-16a0-4b7c-b057-58bb81d32cc2"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[ITEM]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="36" y="20" width="70" height="11" uuid="61d84836-ef85-440f-96bc-7bfae786dd29"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[CONTRAMARCA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="113" y="20" width="30" height="11" uuid="9e214957-9913-493d-83ad-8e29bfd58e11"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[SHELF]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="149" y="20" width="40" height="11" uuid="96ad0159-017a-459b-977c-a197c4aa71e1"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[QTD EMB]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="195" y="20" width="40" height="11" uuid="042b9301-81c1-4f74-a97e-e6e6ef437c80"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[QTD ITEM]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="245" y="20" width="25" height="11" uuid="1f7bda4f-4f79-4177-81be-ec217e190a5a"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[L. F.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="298" y="20" width="40" height="11" uuid="03c1e3e7-2f09-4662-8663-5cada75d3a7c"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[PALLETE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="367" y="20" width="30" height="11" uuid="d217f89a-3f96-4df9-b745-bf2b796adc73"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[LOTE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="407" y="20" width="30" height="11" uuid="4af29073-95a6-43f6-9e3b-1a625ef52249"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[SHELF]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="450" y="20" width="40" height="11" uuid="15fbe33e-da0b-463c-aa61-379191a08fc2"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[QTD EMB]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="504" y="20" width="40" height="11" uuid="b4dcdbdc-b65a-4889-b232-dc88de378b2f"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[QTD ITEM]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="77" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="22" width="555" height="30" uuid="026a1629-2d7f-4c0f-a757-518651371030">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Plano de Carga]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="62" width="100" height="14" uuid="277fc3fc-045a-469e-8406-4579e9dfab49"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="2" width="100" height="12" uuid="0c655125-4ef6-4047-ae2d-40af56bf3a14">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="460" y="63" width="95" height="12" uuid="35d6aaf2-e884-44c8-bb00-b45dd2153131">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LOGF0103/LOGR0103]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="37">
+			<textField>
+				<reportElement x="2" y="6" width="30" height="11" uuid="e662db6a-66fc-4910-ac9e-40bff84d5d97">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CD_ITEM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="6" width="30" height="11" uuid="2579f818-dda1-4553-80b3-07c15ecd793c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SHELF_ITEM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="6" width="40" height="11" uuid="76843daa-b2fa-45e4-82c8-dc5c604ba37a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{QTDE_EMB_ITEM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="196" y="6" width="40" height="11" uuid="260d5b70-3ddd-44d1-b777-5f61bff38b71">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{QTDE_ITEM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="246" y="6" width="35" height="11" uuid="05d3905e-e33f-4d8d-bb9b-4be72ff4635c"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CD_LOCFISDEPO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="361" y="6" width="45" height="11" uuid="782f9e28-6fbe-484b-8aa1-16142bcfc5be">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CD_LOTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="284" y="6" width="75" height="11" uuid="77a34adf-d312-4633-9a58-26e11479d9d9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CD_PALLET}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="408" y="6" width="30" height="11" uuid="bf0f087b-f5fe-4d39-a9f4-e20af1ad4029">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SHELF_LOTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="451" y="6" width="40" height="11" uuid="07df92ae-bc34-425c-8c3a-3a1b5194b550">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{QTDE_EMB_ITEM_RES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="505" y="6" width="51" height="11" uuid="4f52e0c2-4917-47ba-a71d-654a6b04690f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{QTDE_ITEM_RES}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="391" y="22" width="47" height="11" uuid="bffc7044-c893-4236-bbc8-843e88173acf"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[SUBTOTAL]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="441" y="22" width="50" height="11" backcolor="#9C9A9A" uuid="b22d8e11-a8b7-4e21-9442-4d736fc8dfe9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{QTDE_EMB_ITEM_RES1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="505" y="22" width="51" height="11" backcolor="#9C9A9A" uuid="186120bf-887d-4e93-8b4c-2d9db0f98f53"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{QTDE_ITEM_RES1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
