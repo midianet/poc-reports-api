@@ -1,0 +1,9 @@
+${AnsiColor.GREEN}                                       _____                       _
+${AnsiColor.BRIGHT_BLUE}     /\                               ${AnsiColor.GREEN}|  __ \                     | |
+${AnsiColor.BRIGHT_BLUE}    /  \  _   _ _ __ ___  _ __ __ _   ${AnsiColor.GREEN}| |__) |___ _ __   ___  _ __| |_
+${AnsiColor.BRIGHT_BLUE}   / /\ \| | | | '__/ _ \| '__/ _` |  ${AnsiColor.GREEN}|  _  // _ \ '_ \ / _ \| '__| __|
+${AnsiColor.BRIGHT_BLUE}  / ____ \ |_| | | | (_) | | | (_| |  ${AnsiColor.GREEN}| | \ \  __/ |_) | (_) | |  | |_
+${AnsiColor.BRIGHT_BLUE} /_/    \_\__,_|_|  \___/|_|  \__,_|  ${AnsiColor.GREEN}|_|  \_\___| .__/ \___/|_|   \__|
+${AnsiColor.GREEN}                                                 | |
+${AnsiColor.GREEN}                                                 |_|
+${AnsiColor.WHITE}
