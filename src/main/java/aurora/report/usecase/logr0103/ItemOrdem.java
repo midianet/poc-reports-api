@@ -11,7 +11,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ItemOrdem {
-    private Integer cdOrdempick;
+    private Integer id;
+    private String cdOrdempick;
     private Integer itmordpickId;
     private Integer cdItem;
     private String  descrItem;
@@ -20,4 +21,5 @@ public class ItemOrdem {
     private Double  qtdeItem;
     private String  contraMarca;
     private List<Reserva> reservas;
+
 }

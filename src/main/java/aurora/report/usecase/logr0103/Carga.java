@@ -6,11 +6,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Carga {
+    private Integer id;
     private Integer cargaId;
     private Integer cdCarrocveic;
     private Integer cdLocallogOrig;
@@ -36,5 +39,6 @@ public class Carga {
     private Integer pesoBrutoCarroc;
     private String  descrPaises;
     private String  nomeClieContrato;
+    private List<Ordem> ordens;
 
 }

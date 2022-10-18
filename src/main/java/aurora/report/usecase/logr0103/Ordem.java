@@ -12,13 +12,14 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Ordem {
-
+    private Integer id;
     private Integer cdLocallogDest;
     private String  descrLocallogDest;
-    private Integer cdOrdempick;
+    private String cdOrdempick;
     private Integer cdLocallogDesc;
     private String  descrLocallogDesc;
-    private Integer cdBarra;
+    private String cdBarra;
     private List<ItemOrdem> itens;
     private List<PedFatur> pedidos;
+
 }

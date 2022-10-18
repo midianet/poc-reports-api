@@ -1,28 +1,28 @@
-package aurora.report.usecase.logr0103;
+package aurora.report.usecase.logr0103novo;
+
 import aurora.report.helper.JasperHelper;
 import aurora.report.model.Report;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletResponse;
 
-
 @RestController
 @CrossOrigin("*")
-@RequestMapping("/logr0103")
+@RequestMapping("/xpt")
 @RequiredArgsConstructor
-public class Logr0103Resource {
+public class Logr0103NovoResource {
 
-    private final Logr0103Service service;
+    private final Logr0103NovoService service;
 
-    @GetMapping
     public ResponseEntity<Object> generate(@RequestParam(name = "type", required = false, defaultValue = JasperHelper.DEFAULT_TYPE) final Report.Type type,
-                                           //@RequestParam(name = "cargaId") final Integer cargaId,
-                                          // @RequestParam(name = "itemOrdPickId") final Integer itemOrdPickId,
                                            HttpServletResponse response){
 
-        final var report = service.buildReport(type);
+        final var report = service.builReport(type);
 
         return ResponseEntity
                 .ok()

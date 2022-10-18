@@ -16,36 +16,42 @@ public class Logr0103Service {
 
 
 
-    private Logr0103Model buildData(@NonNull final Integer cargaId,
-                                    @NonNull final Integer itemOrdPickId) {
+    private Logr0103Model buildData() {
         //atribiu a carga os dados da carga
         final var carga = repository.findCarga()
                 .orElseThrow(() -> new RuntimeException("Carga inexistente"));
 
         //atribui a lista de ordens os itens da ordem
-        final var ordens = repository.listOrdem(cargaId);
+        carga.setOrdens(repository.listOrdem());
 
-        ordens.forEach(ordem -> {
+        //monta o json
+
+
+        carga.getOrdens().forEach(ordem -> {
+
             ordem.setItens(repository.listItemOrdem(ordem.getCdOrdempick()));
-            ordem.getItens().forEach(item -> item.setReservas(repository.listReserva(itemOrdPickId)) );
+
+            ordem.getItens()
+                    .forEach(item ->
+                            item.setReservas(repository.listReserva(item.getItmordpickId())) );
+
             ordem.setPedidos(repository.listPedFatur(ordem.getCdOrdempick()));
         } );
 
-
-
-
         return Logr0103Model.builder()
-                .carga(carga)
-                .ordens(ordens).build();
+                .carga(carga).build();
 
     }
 
-    public Report buildReport(@NonNull Report.Type type,
-                              @NonNull Integer cargaId,
-                              @NonNull Integer itemOrdPickId){
+    public Report buildReport(@NonNull Report.Type type){
         final var params = new HashMap<String,Object>();
+        final var data = buildData();
+        final var body =  Report.Type.JSON.equals(type)
+                ? data
+                : JasperHelper.makeReport(type, "logr0103", params, List.of(data));
+
         return Report.builder()
-                .body(JasperHelper.makeReport(type, "logr0103", params, List.of(buildData(cargaId, itemOrdPickId))))
+                .body(body)
                 .type(type.getMediaType())
                 .filename("logr0103")
                 .build();
