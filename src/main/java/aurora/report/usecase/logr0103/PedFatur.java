@@ -11,10 +11,12 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PedFatur {
-    private Integer cdOrdempick;
+    private Integer id;
+    private String cdOrdempick;
     private Integer nroPedFatur;
     private String  obsPedFatur;
     private String  nomeClie;
     private String  cidadeClie;
     private String  ufClie;
+
 }

@@ -43,6 +43,7 @@ public class Logr0103Repository {
                          , peso_bruto_carroc
                          , descr_paises
                          , nome_clie_contrato
+                         , 1 as id
                     from logr0103_temp
                     where cargsaida_id is not null
                 """, Map.of(), rowMapperCarga).stream().findFirst();
@@ -74,9 +75,10 @@ public class Logr0103Repository {
                     .nroPlanoEmbarq(rs.getString("nro_plano_embarq"))
                     .pesoBrutoCarroc(rs.getInt("peso_bruto_carroc"))
                     .descrPaises(rs.getString("descr_paises"))
-                    .nomeClieContrato(rs.getString("nome_clie_contrato")).build();
+                    .nomeClieContrato(rs.getString("nome_clie_contrato"))
+                    .id(rs.getInt("id")).build();
 
-    public List<Ordem> listOrdem(@NonNull final Integer cargaId) {
+    public List<Ordem> listOrdem() {
         return jdbc.query("""
                 select tmp.cd_locallog_dest
                      , tmp.descr_locallog_dest
@@ -84,23 +86,24 @@ public class Logr0103Repository {
                      , tmp.cd_locallog_desc
                      , tmp.descr_locallog_desc
                      , tmp.cd_barra
-                                
+                     , 1 as id        
                   from logr0103_temp tmp
                   where tmp.cd_locallog_dest is not null
-                    and tmp.cargsaida_id = :cargaId
-                """, Map.of("cargaId", cargaId), rowMapperOrdem);
+                   
+                """, Map.of(), rowMapperOrdem);
     }
-
     private RowMapper<Ordem> rowMapperOrdem = (rs, rowNum) ->
             Ordem.builder()
                     .cdLocallogDest(rs.getInt("cd_locallog_dest"))
                     .descrLocallogDest(rs.getString("descr_locallog_dest"))
-                    .cdOrdempick(rs.getInt("cd_ordempick"))
+                    .cdOrdempick(rs.getString("cd_ordempick"))
                     .cdLocallogDesc(rs.getInt("cd_locallog_desc"))
                     .descrLocallogDesc(rs.getString("descr_locallog_desc"))
-                    .cdBarra(rs.getInt("cd_barra"))
+                    .cdBarra(rs.getString("cd_barra"))
+                    .id(rs.getInt("id"))
                     .build();
-    public List<ItemOrdem> listItemOrdem(@NonNull final Integer idOrdem) {
+
+    public List<ItemOrdem> listItemOrdem(@NonNull final String idOrdem) {
         return jdbc.query("""
                 select tmp.cd_ordempick
                      , tmp.itmordpick_id
@@ -110,26 +113,28 @@ public class Logr0103Repository {
                      , tmp.qtde_emb_item
                      , tmp.qtde_item
                      , tmp.contramarca
+                     , 1 as id
                   from logr0103_temp tmp
                  where tmp.cd_item is not null
-                  and  tmp.cd_ordempicki = :idOrdem          
+                  and  tmp.cd_ordempick = :idOrdem          
                 """, Map.of("idOrdem" , idOrdem), rowMapperItemOrdem);
     }
 
     private RowMapper<ItemOrdem> rowMapperItemOrdem = (rs, rowNum) ->
             ItemOrdem.builder()
-                    .cdOrdempick(rs.getInt("cd_ordempick"))
+                    .cdOrdempick(rs.getString("cd_ordempick"))
                     .itmordpickId(rs.getInt("itmordpick_id"))
                     .cdItem(rs.getInt("cd_item"))
                     .descrItem(rs.getString("descr_item"))
                     .shefItem(rs.getDouble("shelf_item"))
                     .qtdeItem(rs.getDouble("qtde_item"))
                     .qtdeEmbItem(rs.getDouble("qtde_emb_item"))
-                    .contraMarca(rs.getString("contramarca")).build();
+                    .contraMarca(rs.getString("contramarca"))
+                    .id(rs.getInt("id")).build();
 
 
 
-    public List<PedFatur> listPedFatur(@NonNull final Integer idOrdem) {
+    public List<PedFatur> listPedFatur(@NonNull final String idOrdem) {
         return jdbc.query("""
                 select tmp.cd_ordempick
                      , tmp.nro_ped_fatur
@@ -137,6 +142,7 @@ public class Logr0103Repository {
                      , tmp.nome_clie
                      , tmp.cidade_clie
                      , tmp.uf_clie
+                     , 1 as id
                   from logr0103_temp tmp
                  where tmp.nro_ped_fatur is not null
                    and tmp.cd_ordempick = :idOrdem
@@ -145,12 +151,13 @@ public class Logr0103Repository {
 
     private RowMapper<PedFatur> rowMapperPedFatur = (rs, rowNum) ->
             PedFatur.builder()
-                    .cdOrdempick(rs.getInt("cd_ordempick"))
+                    .cdOrdempick(rs.getString("cd_ordempick"))
                     .nroPedFatur(rs.getInt("nro_ped_fatur"))
                     .obsPedFatur(rs.getString("obs_ped_fatur"))
                     .nomeClie(rs.getString("nome_clie"))
                     .cidadeClie(rs.getString("cidade_clie"))
                     .ufClie(rs.getString("uf_clie"))
+                    .id(rs.getInt("id"))
                     .build();
 
     public List<Reserva> listReserva(@NonNull final Integer itemOrdPickId) {
@@ -166,11 +173,12 @@ public class Logr0103Repository {
                         , tmp.ordem_locfisdepo
                         , tmp.ordem_pallet
                         , tmp.cd_tpsitlestv 
+                        , 1 as id
                      from logr0103_temp tmp
                     where tmp.cd_locfisdepo is not null
                       and tmp.itmordpick_id = :itemOrdPickId
                  order by  tmp.ordem_locfisdepo   desc
-                            ,  tmp.ordem_pallet   descs
+                            ,  tmp.ordem_pallet   desc
                             ,  tmp.shelf_lote     desc
                             ,  tmp.cd_locfisdepo
                             ,  tmp.cd_pallet      
@@ -190,6 +198,7 @@ public class Logr0103Repository {
                     .ordemLocfisdepo(rs.getInt("ordem_locfisdepo"))
                     .ordemPallet(rs.getInt("ordem_pallet"))
                     .cdTpsitlestv(rs.getInt("cd_tpsitlestv"))
+                    .id(rs.getInt("id"))
                     .build();
 
 }
