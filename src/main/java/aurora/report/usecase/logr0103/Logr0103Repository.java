@@ -84,7 +84,7 @@ public class Logr0103Repository {
                      , tmp.cd_ordempick
                      , tmp.cd_locallog_desc
                      , tmp.descr_locallog_desc
-                     , tmp.cd_barra    
+                     , tmp.cd_barra     
                   from logr0103_temp tmp
                   where tmp.cd_locallog_dest is not null
                    
