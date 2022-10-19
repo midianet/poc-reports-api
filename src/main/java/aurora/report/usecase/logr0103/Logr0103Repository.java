@@ -43,7 +43,6 @@ public class Logr0103Repository {
                          , peso_bruto_carroc
                          , descr_paises
                          , nome_clie_contrato
-                         , 1 as id
                     from logr0103_temp
                     where cargsaida_id is not null
                 """, Map.of(), rowMapperCarga).stream().findFirst();
@@ -76,7 +75,7 @@ public class Logr0103Repository {
                     .pesoBrutoCarroc(rs.getInt("peso_bruto_carroc"))
                     .descrPaises(rs.getString("descr_paises"))
                     .nomeClieContrato(rs.getString("nome_clie_contrato"))
-                    .id(rs.getInt("id")).build();
+                    .build();
 
     public List<Ordem> listOrdem() {
         return jdbc.query("""
@@ -85,8 +84,7 @@ public class Logr0103Repository {
                      , tmp.cd_ordempick
                      , tmp.cd_locallog_desc
                      , tmp.descr_locallog_desc
-                     , tmp.cd_barra
-                     , 1 as id        
+                     , tmp.cd_barra    
                   from logr0103_temp tmp
                   where tmp.cd_locallog_dest is not null
                    
@@ -100,24 +98,53 @@ public class Logr0103Repository {
                     .cdLocallogDesc(rs.getInt("cd_locallog_desc"))
                     .descrLocallogDesc(rs.getString("descr_locallog_desc"))
                     .cdBarra(rs.getString("cd_barra"))
-                    .id(rs.getInt("id"))
                     .build();
 
-    public List<ItemOrdem> listItemOrdem(@NonNull final String idOrdem) {
+    public List<ItemOrdem> listItemOrdem() {
         return jdbc.query("""
-                select tmp.cd_ordempick
-                     , tmp.itmordpick_id
-                     , tmp.cd_item
-                     , tmp.descr_item
-                     , tmp.shelf_item
-                     , tmp.qtde_emb_item
-                     , tmp.qtde_item
-                     , tmp.contramarca
-                     , 1 as id
-                  from logr0103_temp tmp
-                 where tmp.cd_item is not null
-                  and  tmp.cd_ordempick = :idOrdem          
-                """, Map.of("idOrdem" , idOrdem), rowMapperItemOrdem);
+                with item as (
+                                
+                select
+                      tmp.cd_ordempick
+                    , tmp.itmordpick_id
+                    , tmp.cd_item
+                    , tmp.descr_item
+                    , tmp.shelf_item
+                    , tmp.qtde_emb_item
+                    , tmp.qtde_item
+                    , tmp.contramarca
+                from logr0103_temp tmp
+                where tmp.cd_item is not null)
+                                
+                , reserva as (
+                select
+                      tmp.itmordpick_id
+                    , tmp.cd_pallet
+                    , tmp.cd_lote
+                    , tmp.shelf_lote
+                    , tmp.cd_locfisdepo
+                    , tmp.qtde_emb_item_res
+                    , tmp.qtde_item_res
+                    , tmp.obrig
+                    , tmp.ordem_locfisdepo
+                    , tmp.ordem_pallet
+                    , tmp.cd_tpsitlestv
+                from logr0103_temp tmp
+                where tmp.cd_locfisdepo is not null)
+                                
+                select
+                      item.*
+                    , reserva.cd_pallet
+                    , reserva.cd_lote
+                    , reserva.shelf_lote
+                    , reserva.cd_locfisdepo
+                    , reserva.qtde_emb_item_res
+                    , reserva.qtde_item_res
+                   
+                from  item, reserva
+                                
+                where item.itmordpick_id = reserva.itmordpick_id     
+                """, Map.of(), rowMapperItemOrdem);
     }
 
     private RowMapper<ItemOrdem> rowMapperItemOrdem = (rs, rowNum) ->
@@ -130,7 +157,13 @@ public class Logr0103Repository {
                     .qtdeItem(rs.getDouble("qtde_item"))
                     .qtdeEmbItem(rs.getDouble("qtde_emb_item"))
                     .contraMarca(rs.getString("contramarca"))
-                    .id(rs.getInt("id")).build();
+                    .cdPallet(rs.getInt("cd_pallet"))
+                    .cdLote(rs.getInt("cd_lote"))
+                    .shelfLote(rs.getDouble("shelf_lote"))
+                    .cdLocfisdepo(rs.getInt("cd_locfisdepo"))
+                    .qtdeEmbItemRs(rs.getDouble("qtde_emb_item_res"))
+                    .qtdeItemRes(rs.getDouble("qtde_item_res"))
+                    .build();
 
 
 
@@ -142,7 +175,6 @@ public class Logr0103Repository {
                      , tmp.nome_clie
                      , tmp.cidade_clie
                      , tmp.uf_clie
-                     , 1 as id
                   from logr0103_temp tmp
                  where tmp.nro_ped_fatur is not null
                    and tmp.cd_ordempick = :idOrdem
@@ -157,48 +189,6 @@ public class Logr0103Repository {
                     .nomeClie(rs.getString("nome_clie"))
                     .cidadeClie(rs.getString("cidade_clie"))
                     .ufClie(rs.getString("uf_clie"))
-                    .id(rs.getInt("id"))
-                    .build();
-
-    public List<Reserva> listReserva(@NonNull final Integer itemOrdPickId) {
-        return jdbc.query("""
-                select tmp.itmordpick_id 
-                        , tmp.cd_pallet
-                        , tmp.cd_lote
-                        , tmp.shelf_lote
-                        , tmp.cd_locfisdepo
-                        , tmp.qtde_emb_item_res
-                        , tmp.qtde_item_res
-                        , tmp.obrig 
-                        , tmp.ordem_locfisdepo
-                        , tmp.ordem_pallet
-                        , tmp.cd_tpsitlestv 
-                        , 1 as id
-                     from logr0103_temp tmp
-                    where tmp.cd_locfisdepo is not null
-                      and tmp.itmordpick_id = :itemOrdPickId
-                 order by  tmp.ordem_locfisdepo   desc
-                            ,  tmp.ordem_pallet   desc
-                            ,  tmp.shelf_lote     desc
-                            ,  tmp.cd_locfisdepo
-                            ,  tmp.cd_pallet      
-                """, Map.of("itemOrdPickId", itemOrdPickId), rowMapperReserva);
-    }
-
-    private RowMapper<Reserva> rowMapperReserva = (rs, rowNum) ->
-            Reserva.builder()
-                    .itmordpickId(rs.getInt("itmordpick_id"))
-                    .cdPallet(rs.getInt("cd_pallet"))
-                    .cdLote(rs.getInt("cd_lote"))
-                    .shelfLote(rs.getDouble("shelf_lote"))
-                    .cdLocfisdepo(rs.getInt("cd_locfisdepo"))
-                    .qtdeEmbItemRs(rs.getDouble("qtde_emb_item_res"))
-                    .qtdeItemRes(rs.getDouble("qtde_item_res"))
-                    .obrig(rs.getInt("obrig"))
-                    .ordemLocfisdepo(rs.getInt("ordem_locfisdepo"))
-                    .ordemPallet(rs.getInt("ordem_pallet"))
-                    .cdTpsitlestv(rs.getInt("cd_tpsitlestv"))
-                    .id(rs.getInt("id"))
                     .build();
 
 }

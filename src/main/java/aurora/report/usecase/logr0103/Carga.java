@@ -13,7 +13,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Carga {
-    private Integer id;
     private Integer cargaId;
     private Integer cdCarrocveic;
     private Integer cdLocallogOrig;

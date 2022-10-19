@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sub" pageWidth="555" pageHeight="90" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="27f05b38-4c2a-4655-abee-571536501e53">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Api"/>
+	<queryString language="jsonql">
+		<![CDATA[carga.ordens]]>
+	</queryString>
+	<field name="cdLocallogDest" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="cdLocallogDest"/>
+		<property name="net.sf.jasperreports.json.field.expression" value="cdLocallogDest"/>
+		<fieldDescription><![CDATA[carga.ordens.cdLocallogDest]]></fieldDescription>
+	</field>
+	<field name="descrLocallogDest" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="descrLocallogDest"/>
+		<property name="net.sf.jasperreports.json.field.expression" value="descrLocallogDest"/>
+		<fieldDescription><![CDATA[carga.ordens.descrLocallogDest]]></fieldDescription>
+	</field>
+	<field name="cdOrdempick" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="cdOrdempick"/>
+		<property name="net.sf.jasperreports.json.field.expression" value="cdOrdempick"/>
+		<fieldDescription><![CDATA[carga.ordens.cdOrdempick]]></fieldDescription>
+	</field>
+	<field name="cdLocallogDesc" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="cdLocallogDesc"/>
+		<property name="net.sf.jasperreports.json.field.expression" value="cdLocallogDesc"/>
+		<fieldDescription><![CDATA[carga.ordens.cdLocallogDesc]]></fieldDescription>
+	</field>
+	<field name="descrLocallogDesc" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="descrLocallogDesc"/>
+		<property name="net.sf.jasperreports.json.field.expression" value="descrLocallogDesc"/>
+		<fieldDescription><![CDATA[carga.ordens.descrLocallogDesc]]></fieldDescription>
+	</field>
+	<field name="cdBarra" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="cdBarra"/>
+		<property name="net.sf.jasperreports.json.field.expression" value="cdBarra"/>
+		<fieldDescription><![CDATA[carga.ordens.cdBarra]]></fieldDescription>
+	</field>
+	<field name="itens" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="itens"/>
+		<property name="net.sf.jasperreports.json.field.expression" value="itens"/>
+		<fieldDescription><![CDATA[carga.ordens.itens]]></fieldDescription>
+	</field>
+	<field name="pedidos" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="pedidos"/>
+		<property name="net.sf.jasperreports.json.field.expression" value="pedidos"/>
+		<fieldDescription><![CDATA[carga.ordens.pedidos]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="27" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="100" y="0" width="20" height="11" uuid="a79a0bc9-9b6c-4c96-aa50-9069d06baeee">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cdLocallogDest}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="11" uuid="aa77a437-8871-4967-b5a6-8413fa14c933">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LOCAL DE DESCARGA..:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="0" width="110" height="11" uuid="f28bf054-9d8a-4b17-afd4-5dd4d4b2fc87">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descrLocallogDest}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="253" y="11" width="100" height="11" uuid="91c248b9-b755-47b7-b2f2-b7846bcb8723">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cdOrdempick}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="260" y="0" width="70" height="11" uuid="5dedc58a-a930-4df4-b488-55e315f0ceaf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ORDEM PICKING]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

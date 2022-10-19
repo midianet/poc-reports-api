@@ -29,11 +29,11 @@ public class Logr0103Service {
 
         carga.getOrdens().forEach(ordem -> {
 
-            ordem.setItens(repository.listItemOrdem(ordem.getCdOrdempick()));
+            ordem.setItens(repository.listItemOrdem());
 
-            ordem.getItens()
-                    .forEach(item ->
-                            item.setReservas(repository.listReserva(item.getItmordpickId())) );
+            //ordem.getItens()
+            //        .forEach(item ->
+            //                item.setReservas(repository.listReserva(item.getItmordpickId())) );
 
             ordem.setPedidos(repository.listPedFatur(ordem.getCdOrdempick()));
         } );

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sub1" pageWidth="555" pageHeight="90" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="4eff8397-77c0-404e-93da-3ca226928590">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Api"/>
+	<queryString language="jsonql">
+		<![CDATA[carga.ordens.pedidos]]>
+	</queryString>
+	<field name="cdOrdempick" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="cdOrdempick"/>
+		<property name="net.sf.jasperreports.json.field.expression" value="cdOrdempick"/>
+		<fieldDescription><![CDATA[carga.ordens.pedidos.cdOrdempick]]></fieldDescription>
+	</field>
+	<field name="nroPedFatur" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="nroPedFatur"/>
+		<property name="net.sf.jasperreports.json.field.expression" value="nroPedFatur"/>
+		<fieldDescription><![CDATA[carga.ordens.pedidos.nroPedFatur]]></fieldDescription>
+	</field>
+	<field name="obsPedFatur" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="obsPedFatur"/>
+		<property name="net.sf.jasperreports.json.field.expression" value="obsPedFatur"/>
+		<fieldDescription><![CDATA[carga.ordens.pedidos.obsPedFatur]]></fieldDescription>
+	</field>
+	<field name="nomeClie" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="nomeClie"/>
+		<property name="net.sf.jasperreports.json.field.expression" value="nomeClie"/>
+		<fieldDescription><![CDATA[carga.ordens.pedidos.nomeClie]]></fieldDescription>
+	</field>
+	<field name="cidadeClie" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="cidadeClie"/>
+		<property name="net.sf.jasperreports.json.field.expression" value="cidadeClie"/>
+		<fieldDescription><![CDATA[carga.ordens.pedidos.cidadeClie]]></fieldDescription>
+	</field>
+	<field name="ufClie" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="ufClie"/>
+		<property name="net.sf.jasperreports.json.field.expression" value="ufClie"/>
+		<fieldDescription><![CDATA[carga.ordens.pedidos.ufClie]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="27" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="70" y="0" width="54" height="11" uuid="8fd98432-a9c8-4115-a883-4df85def92a7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nroPedFatur}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="70" y="14" width="484" height="11" uuid="8cb13e09-ca23-4aa9-881f-f8f13a13a5fd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{obsPedFatur}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="167" y="0" width="193" height="11" uuid="72d6a6c4-d53d-4a08-9cd7-c18c6fe827ff">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomeClie}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="74" height="11" uuid="628663db-8a86-4e5f-8f3f-16f485cfff34">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cidadeClie}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="495" y="0" width="30" height="11" uuid="c4f6c3ce-9841-4e13-89c1-caef9c56001f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ufClie}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="70" height="11" uuid="e43b03ca-9a56-410b-8fd0-c265f2ee2a57">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEDIDO.......:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="14" width="70" height="11" uuid="0285c351-ed16-4574-9e13-21ab6bccaf05">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OBS..........:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="124" y="0" width="43" height="11" uuid="dc9c1bbf-6233-41fc-9e32-04f079401651">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CLIENTE..:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="0" width="40" height="11" uuid="68dd755f-a3cd-4373-b1f4-be68924437ac">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CIDADE..:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="474" y="0" width="20" height="11" uuid="42f84737-13fd-4207-beea-2611ef530da3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UF:]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

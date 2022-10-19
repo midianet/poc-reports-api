@@ -4,10 +4,7 @@ import aurora.report.helper.JasperHelper;
 import aurora.report.model.Report;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -18,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 public class Logr0103NovoResource {
 
     private final Logr0103NovoService service;
-
+    @GetMapping
     public ResponseEntity<Object> generate(@RequestParam(name = "type", required = false, defaultValue = JasperHelper.DEFAULT_TYPE) final Report.Type type,
                                            HttpServletResponse response){
 

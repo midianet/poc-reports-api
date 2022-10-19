@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sub3" columnDirection="RTL" pageWidth="555" pageHeight="750" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="b679cf02-102d-468f-a94c-de42ccb7a4f4">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Api"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString language="jsonql">
+		<![CDATA[carga.ordens.itens]]>
+	</queryString>
+	<field name="cdOrdempick" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="cdOrdempick"/>
+		<fieldDescription><![CDATA[carga.ordens.itens.cdOrdempick]]></fieldDescription>
+	</field>
+	<field name="itmordpickId" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="itmordpickId"/>
+		<fieldDescription><![CDATA[carga.ordens.itens.itmordpickId]]></fieldDescription>
+	</field>
+	<field name="cdItem" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="cdItem"/>
+		<fieldDescription><![CDATA[carga.ordens.itens.cdItem]]></fieldDescription>
+	</field>
+	<field name="descrItem" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="descrItem"/>
+		<fieldDescription><![CDATA[carga.ordens.itens.descrItem]]></fieldDescription>
+	</field>
+	<field name="shefItem" class="java.math.BigDecimal">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="shefItem"/>
+		<fieldDescription><![CDATA[carga.ordens.itens.shefItem]]></fieldDescription>
+	</field>
+	<field name="qtdeEmbItem" class="java.math.BigDecimal">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="qtdeEmbItem"/>
+		<fieldDescription><![CDATA[carga.ordens.itens.qtdeEmbItem]]></fieldDescription>
+	</field>
+	<field name="qtdeItem" class="java.math.BigDecimal">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="qtdeItem"/>
+		<fieldDescription><![CDATA[carga.ordens.itens.qtdeItem]]></fieldDescription>
+	</field>
+	<field name="contraMarca" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="contraMarca"/>
+		<fieldDescription><![CDATA[carga.ordens.itens.contraMarca]]></fieldDescription>
+	</field>
+	<field name="cdPallet" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="cdPallet"/>
+		<fieldDescription><![CDATA[carga.ordens.itens.cdPallet]]></fieldDescription>
+	</field>
+	<field name="cdLote" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="cdLote"/>
+		<fieldDescription><![CDATA[carga.ordens.itens.cdLote]]></fieldDescription>
+	</field>
+	<field name="shelfLote" class="java.math.BigDecimal">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="shelfLote"/>
+		<fieldDescription><![CDATA[carga.ordens.itens.shelfLote]]></fieldDescription>
+	</field>
+	<field name="cdLocfisdepo" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="cdLocfisdepo"/>
+		<fieldDescription><![CDATA[carga.ordens.itens.cdLocfisdepo]]></fieldDescription>
+	</field>
+	<field name="qtdeEmbItemRs" class="java.math.BigDecimal">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="qtdeEmbItemRs"/>
+		<fieldDescription><![CDATA[carga.ordens.itens.qtdeEmbItemRs]]></fieldDescription>
+	</field>
+	<field name="qtdeItemRes" class="java.math.BigDecimal">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="qtdeItemRes"/>
+		<fieldDescription><![CDATA[carga.ordens.itens.qtdeItemRes]]></fieldDescription>
+	</field>
+	<variable name="qtdeEmbItemRs1" class="java.math.BigDecimal" resetType="Group" resetGroup="item" calculation="Sum">
+		<variableExpression><![CDATA[$F{qtdeEmbItemRs}]]></variableExpression>
+	</variable>
+	<variable name="qtdeItemRes1" class="java.math.BigDecimal" resetType="Group" resetGroup="item" calculation="Sum">
+		<variableExpression><![CDATA[$F{qtdeItemRes}]]></variableExpression>
+	</variable>
+	<group name="item">
+		<groupExpression><![CDATA[$F{cdItem}]]></groupExpression>
+		<groupHeader>
+			<band height="25">
+				<staticText>
+					<reportElement x="284" y="14" width="15" height="11" uuid="975ae59c-cdf2-40ea-a847-8553fc92d151">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f41bf87a-ade4-4e76-bc43-5d9f1b53860d"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Courier New" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[L.F.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="299" y="14" width="60" height="11" uuid="7f92302e-f656-4436-9fea-612955250b17">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f41bf87a-ade4-4e76-bc43-5d9f1b53860d"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font fontName="Courier New" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PALLET]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="362" y="14" width="50" height="11" uuid="97f21728-021b-4573-b35b-5a4e56784153">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f41bf87a-ade4-4e76-bc43-5d9f1b53860d"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font fontName="Courier New" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[LOTE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="415" y="14" width="30" height="11" uuid="bb4ec29b-bd18-44a0-9cd1-f3d377ee4c0b">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f41bf87a-ade4-4e76-bc43-5d9f1b53860d"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Courier New" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ SHELF]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="448" y="14" width="40" height="11" uuid="30bd7c40-071b-40aa-89af-7b966c3d6954">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f41bf87a-ade4-4e76-bc43-5d9f1b53860d"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right">
+						<font fontName="Courier New" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[QTD EMB]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="492" y="14" width="60" height="11" uuid="a2dee4f7-d5ca-4639-b0a9-c11c9e367d91">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f41bf87a-ade4-4e76-bc43-5d9f1b53860d"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right">
+						<font fontName="Courier New" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[QTD ITEM]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="94" y="2" width="459" height="11" uuid="12f23e81-516a-4ed3-9495-ac39e7ee5420"/>
+					<textElement>
+						<font fontName="Courier New" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{descrItem}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="3" y="2" width="90" height="11" uuid="17bc6719-eb24-44b3-84ec-fa3255041316">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f41bf87a-ade4-4e76-bc43-5d9f1b53860d"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left">
+						<font fontName="Courier New" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[DESCRICAO ITEM........:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="14" width="20" height="11" uuid="f3e451e3-5d07-4451-83fe-120d7e010a35">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f41bf87a-ade4-4e76-bc43-5d9f1b53860d"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font fontName="Courier New" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ITEM]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="26" y="14" width="68" height="11" uuid="57975abf-b3f9-429b-aebe-bba1c531f607">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f41bf87a-ade4-4e76-bc43-5d9f1b53860d"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font fontName="Courier New" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CONTRAMARCA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="94" y="14" width="60" height="11" uuid="cc1129ae-c641-418c-a696-157e39df3212">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f41bf87a-ade4-4e76-bc43-5d9f1b53860d"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font fontName="Courier New" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[SHELF]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="163" y="14" width="50" height="11" uuid="8680497b-d6f9-4d3d-82d2-a7e549c60607">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f41bf87a-ade4-4e76-bc43-5d9f1b53860d"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font fontName="Courier New" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[QTD EMB]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="218" y="14" width="60" height="11" uuid="46a0891e-fe41-4c1d-a46b-864b60419cca">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f41bf87a-ade4-4e76-bc43-5d9f1b53860d"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font fontName="Courier New" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[QTD ITEM]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="11">
+				<textField pattern="#,##0.###;#,##0.###-">
+					<reportElement mode="Opaque" x="448" y="0" width="40" height="11" backcolor="#D4D4D4" uuid="97a6f294-05f5-4c5e-8196-820c5587f227">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f41bf87a-ade4-4e76-bc43-5d9f1b53860d"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right">
+						<font fontName="Courier New" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{qtdeEmbItemRs1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.###;#,##0.###-">
+					<reportElement mode="Opaque" x="492" y="0" width="60" height="11" backcolor="#D4D4D4" uuid="45e98427-2beb-4e24-96ed-28cc6152f19c">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f41bf87a-ade4-4e76-bc43-5d9f1b53860d"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right">
+						<font fontName="Courier New" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{qtdeItemRes1}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="397" y="0" width="50" height="11" uuid="ca76c15f-fcdd-4760-8ea6-3e13fab369aa">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f41bf87a-ade4-4e76-bc43-5d9f1b53860d"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Courier New" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[SUBTOTAL]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement x="284" y="0" width="15" height="11" uuid="e738e2c0-db92-4382-baae-625b12394b6d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f41bf87a-ade4-4e76-bc43-5d9f1b53860d"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cdLocfisdepo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="299" y="0" width="60" height="11" uuid="ba9e19ee-bd92-4b4c-9fd9-4a5113b2cdbd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f41bf87a-ade4-4e76-bc43-5d9f1b53860d"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cdPallet}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="362" y="0" width="50" height="11" uuid="7c7dde0f-8efb-4c28-af2e-3360a75b15c2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f41bf87a-ade4-4e76-bc43-5d9f1b53860d"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cdLote}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="0" width="30" height="11" uuid="bed9779e-d646-4622-bf13-aaa5becd5a0f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f41bf87a-ade4-4e76-bc43-5d9f1b53860d"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{shelfLote}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;#,##0.###-">
+				<reportElement x="448" y="0" width="40" height="11" uuid="ca4b598b-65de-4bea-95f4-12f437dff3ff">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f41bf87a-ade4-4e76-bc43-5d9f1b53860d"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qtdeEmbItemRs}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.000;#,##0.000-">
+				<reportElement x="492" y="0" width="60" height="11" uuid="08ac1f92-2a99-4e9c-91a7-af0248a6d73c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f41bf87a-ade4-4e76-bc43-5d9f1b53860d"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qtdeItemRes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement isPrintRepeatedValues="false" x="2" y="0" width="20" height="11" uuid="9437ad68-ddb0-4de8-895f-8ec2776dd2b0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d5320162-f7e4-473e-872d-3daea58fa487"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cdItem}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement isPrintRepeatedValues="false" x="26" y="0" width="68" height="11" uuid="12c80387-14d2-4f3b-991f-46e7533531db">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aac9e95d-3306-4e79-a4a2-55208a7afe7a"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{contraMarca}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement isPrintRepeatedValues="false" x="163" y="0" width="50" height="11" uuid="599f5e37-7548-4fe0-ad6f-a031b7587ac3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3277da3d-9ffc-4521-b8e0-00453be44a98"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qtdeEmbItem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement isPrintRepeatedValues="false" x="218" y="0" width="60" height="11" uuid="cd5025d1-f6b2-4ad9-89f1-2dfd97cfab62">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9dca1b30-51d1-4ca6-9b08-4eef554edc63"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qtdeItem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement isPrintRepeatedValues="false" x="94" y="0" width="60" height="11" uuid="05681266-37f0-4679-9e75-dad0efca729a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{shefItem}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

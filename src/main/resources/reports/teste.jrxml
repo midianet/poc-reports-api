@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="teste" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ab9ef9a3-4172-4881-9339-0ed04592bdc4">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Api"/>
+	<queryString language="JSON">
+		<![CDATA[carga]]>
+	</queryString>
+	<field name="cargaId" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="cargaId"/>
+		<fieldDescription><![CDATA[carga.cargaId]]></fieldDescription>
+	</field>
+	<field name="cdCarrocveic" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="cdCarrocveic"/>
+		<fieldDescription><![CDATA[carga.cdCarrocveic]]></fieldDescription>
+	</field>
+	<field name="cdLocallogOrig" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="cdLocallogOrig"/>
+		<fieldDescription><![CDATA[carga.cdLocallogOrig]]></fieldDescription>
+	</field>
+	<field name="descrLocallogOrig" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="descrLocallogOrig"/>
+		<fieldDescription><![CDATA[carga.descrLocallogOrig]]></fieldDescription>
+	</field>
+	<field name="placaCarrocveic" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="placaCarrocveic"/>
+		<fieldDescription><![CDATA[carga.placaCarrocveic]]></fieldDescription>
+	</field>
+	<field name="cdTpcarsai" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="cdTpcarsai"/>
+		<fieldDescription><![CDATA[carga.cdTpcarsai]]></fieldDescription>
+	</field>
+	<field name="descTpcarsai" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="descTpcarsai"/>
+		<fieldDescription><![CDATA[carga.descTpcarsai]]></fieldDescription>
+	</field>
+	<field name="nomeTransporta" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="nomeTransporta"/>
+		<fieldDescription><![CDATA[carga.nomeTransporta]]></fieldDescription>
+	</field>
+	<field name="cdTpconscarg" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="cdTpconscarg"/>
+		<fieldDescription><![CDATA[carga.cdTpconscarg]]></fieldDescription>
+	</field>
+	<field name="descrTpconscarg" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="descrTpconscarg"/>
+		<fieldDescription><![CDATA[carga.descrTpconscarg]]></fieldDescription>
+	</field>
+	<field name="capacPalete" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="capacPalete"/>
+		<fieldDescription><![CDATA[carga.capacPalete]]></fieldDescription>
+	</field>
+	<field name="temperMin" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="temperMin"/>
+		<fieldDescription><![CDATA[carga.temperMin]]></fieldDescription>
+	</field>
+	<field name="temperMax" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="temperMax"/>
+		<fieldDescription><![CDATA[carga.temperMax]]></fieldDescription>
+	</field>
+	<field name="capacCarga" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="capacCarga"/>
+		<fieldDescription><![CDATA[carga.capacCarga]]></fieldDescription>
+	</field>
+	<field name="cdTpmovprotv" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="cdTpmovprotv"/>
+		<fieldDescription><![CDATA[carga.cdTpmovprotv]]></fieldDescription>
+	</field>
+	<field name="descrTpmovprotv" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="descrTpmovprotv"/>
+		<fieldDescription><![CDATA[carga.descrTpmovprotv]]></fieldDescription>
+	</field>
+	<field name="embarqRetirada" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="embarqRetirada"/>
+		<fieldDescription><![CDATA[carga.embarqRetirada]]></fieldDescription>
+	</field>
+	<field name="seqCarga" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="seqCarga"/>
+		<fieldDescription><![CDATA[carga.seqCarga]]></fieldDescription>
+	</field>
+	<field name="totOrigem" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="totOrigem"/>
+		<fieldDescription><![CDATA[carga.totOrigem]]></fieldDescription>
+	</field>
+	<field name="nroContainer" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="nroContainer"/>
+		<fieldDescription><![CDATA[carga.nroContainer]]></fieldDescription>
+	</field>
+	<field name="payload" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="payload"/>
+		<fieldDescription><![CDATA[carga.payload]]></fieldDescription>
+	</field>
+	<field name="nroPlanoEmbarq" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="nroPlanoEmbarq"/>
+		<fieldDescription><![CDATA[carga.nroPlanoEmbarq]]></fieldDescription>
+	</field>
+	<field name="pesoBrutoCarroc" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="pesoBrutoCarroc"/>
+		<fieldDescription><![CDATA[carga.pesoBrutoCarroc]]></fieldDescription>
+	</field>
+	<field name="descrPaises" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="descrPaises"/>
+		<fieldDescription><![CDATA[carga.descrPaises]]></fieldDescription>
+	</field>
+	<field name="nomeClieContrato" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="nomeClieContrato"/>
+		<fieldDescription><![CDATA[carga.nomeClieContrato]]></fieldDescription>
+	</field>
+	<field name="ordens" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="ordens"/>
+		<fieldDescription><![CDATA[carga.ordens]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="186" y="2" width="182" height="30" uuid="1061caab-e030-4f1a-b78e-81f1af83a862"/>
+				<textElement>
+					<font fontName="Courier New" size="20"/>
+				</textElement>
+				<text><![CDATA[Plano de Carga]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="95" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="2" width="95" height="11" uuid="91668d88-94f7-42f5-a7a6-976f457ddca9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NRO CARGA.........:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="14" width="95" height="11" uuid="c41d84de-88c7-4a59-a3e9-8911868eaebf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ORIGEM...........................:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="26" width="95" height="11" uuid="92e1e781-82b4-4cb2-99fa-fb0c35b42178">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIPO CARGA........:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="38" width="95" height="11" uuid="a433d9bc-7c3e-40db-9a09-0cd1f4ffbb21">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TP CONSERV CARGA..:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="50" width="95" height="11" uuid="0e58b052-a395-4a16-b123-63d0463574df">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FAIXA TEMPERATURA.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="62" width="95" height="11" uuid="18e6c33d-9b37-4427-adb2-b524530d32b3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIPO CARREGAMENTO.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="74" width="95" height="11" uuid="68eb81bc-3d4c-4680-872e-6fdb73d0634a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SEQUENCIA COLETA..:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="2" width="108" height="11" uuid="5ad87bcd-da69-4a02-a722-99f8049b584c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FROTA..................................:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="14" width="108" height="11" uuid="57a21ee4-54e3-41ce-97bf-dfd6b6086815">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PLACA CARRETA........:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="26" width="108" height="11" uuid="9e1e4cb9-50fa-4a48-9003-a66c62b7498b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TRANSPORTADOR..............:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="38" width="108" height="11" uuid="b73291c1-30d7-4cb5-b645-af2cf075dca1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CAP. VEIC. PALETES...:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="50" width="108" height="11" uuid="e6b8d817-a135-4f94-a323-d848c793f97d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CAP. VEIC. PESO......:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="62" width="108" height="11" uuid="eeeb53fa-dea4-48f2-9f10-3c57cf7e9e98">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMBARQUE / RETIRA....:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="97" y="2" width="100" height="11" uuid="e6b83c23-8945-4090-a77d-1ff077fd19f0"/>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cargaId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="432" y="2" width="124" height="11" uuid="776ac36d-db7a-4b77-b279-20f55a0989ef">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cdCarrocveic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="14" width="14" height="11" uuid="a4bb5150-65ff-452d-bebc-8a4dd896a654">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cdLocallogOrig}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="14" width="150" height="11" uuid="0cb16549-356d-4f9e-86e8-03c03ccb494c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descrLocallogOrig}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="432" y="14" width="124" height="11" uuid="0467c934-0142-4d2a-9aa5-c144a888f17d"/>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{placaCarrocveic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="26" width="14" height="11" uuid="181ecb5d-81fe-46f9-9c2c-3480452437ec"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cdTpcarsai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="26" width="150" height="11" uuid="3702daf0-6db8-4f0b-82fb-e4d04e8ecce3"/>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descTpcarsai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="38" width="14" height="11" uuid="c0c4d133-8df0-41e7-8617-dd2ba7af0b14"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cdTpconscarg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="38" width="150" height="11" uuid="d9629109-4c5e-4d20-8e7f-5f1c24e44604"/>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descrTpconscarg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="432" y="26" width="124" height="11" uuid="9970815a-6598-4f15-8711-ac4ace254837"/>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomeTransporta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="50" width="34" height="11" uuid="7e276db0-eb67-4901-8077-0df14653c326">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{temperMin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="136" y="50" width="50" height="11" uuid="e2d12542-4a28-4ce2-8bdc-9d98687e672d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{temperMax}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="131" y="50" width="5" height="11" uuid="2f57c2ba-bc6a-4c70-86a7-4f54ebeb668f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[a]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="97" y="62" width="164" height="11" uuid="7f08073e-ee25-4cac-8354-46db5f8859ee"/>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descrTpmovprotv}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="74" width="14" height="11" uuid="d84a5153-21fa-46c8-919f-8b8112f2c6f3"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{seqCarga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="74" width="150" height="11" uuid="94dd3236-61b4-44c5-acb7-6d998b1f6089"/>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totOrigem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="432" y="50" width="124" height="11" uuid="d78fe174-76b4-4219-bd23-736739bc172c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{capacCarga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="432" y="38" width="124" height="11" uuid="6da1a83d-509d-4245-b4a6-fd588128f0a1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{capacPalete}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="432" y="62" width="124" height="11" uuid="d0210b73-d05f-48e7-a877-00e96fb9b412">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Courier New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{embarqRetirada}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="3923e37c-d5ca-44ca-ac68-a1987fea6553">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bbca54bf-92a2-47f7-b6f5-66962e577799"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{capacCarga}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

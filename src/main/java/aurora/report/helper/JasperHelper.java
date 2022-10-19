@@ -4,6 +4,7 @@ import aurora.report.model.Report;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.engine.export.*;
+import net.sf.jasperreports.engine.util.JRLoader;
 import net.sf.jasperreports.export.*;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.lang.NonNull;
@@ -13,6 +14,7 @@ import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
@@ -23,6 +25,9 @@ public final class JasperHelper {
 	}
 
 	public static Object makeReport(@NonNull final Report.Type type, @NonNull final String filename, @NonNull final Map<String, Object> params, @NonNull final Collection data) {
+;
+		params.put("subreportParameter", getSubReport("sub.jasper"));
+
 		try {
 			final var report = JasperFillManager.fillReport(new ClassPathResource(String.format("/jasper/%s.jasper"
 							, filename))
@@ -37,6 +42,15 @@ public final class JasperHelper {
 			};
 		}catch (IOException | JRException e){
 			throw new RuntimeException(e.getMessage(),e);
+		}
+	}
+
+	public static JasperReport getSubReport(final String subReport) {
+		try {
+			return (JasperReport) JRLoader.loadObjectFromFile(new ClassPathResource(String.format("/jasper/%s.jasper"
+					, subReport));
+		} catch (JRException e) {
+			throw new RuntimeException(e.getMessage(), e);
 		}
 	}
 
@@ -80,14 +94,6 @@ public final class JasperHelper {
 		return output.toByteArray();
 	}
 
-
-//	public static JasperReport getSubReport(final String subReport) {
-//		try {
-//			return (JasperReport)JRLoader.loadObject(ReportHelper.class.getResourceAsStream("/reports/" + subReport));
-//		} catch (JRException e) {
-//            throw new RuntimeException(e.getMessage(), e);
-//		}
-//	}
 //
     public static BufferedImage getImage(final String filePath) {
 		try {

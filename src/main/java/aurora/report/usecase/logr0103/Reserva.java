@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Reserva {
-    private Integer id;
+
     private Integer itmordpickId;
     private Integer cdPallet;
     private Integer cdLote;

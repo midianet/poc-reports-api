@@ -12,7 +12,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Ordem {
-    private Integer id;
     private Integer cdLocallogDest;
     private String  descrLocallogDest;
     private String cdOrdempick;
