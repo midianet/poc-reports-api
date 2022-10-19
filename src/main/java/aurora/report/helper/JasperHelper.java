@@ -26,7 +26,7 @@ public final class JasperHelper {
 
 	public static Object makeReport(@NonNull final Report.Type type, @NonNull final String filename, @NonNull final Map<String, Object> params, @NonNull final Collection data) {
 ;
-		params.put("subreportParameter", getSubReport("sub.jasper"));
+		//params.put("subreportParameter", getSubReport("sub.jasper"));
 
 		try {
 			final var report = JasperFillManager.fillReport(new ClassPathResource(String.format("/jasper/%s.jasper"
@@ -45,14 +45,13 @@ public final class JasperHelper {
 		}
 	}
 
-	public static JasperReport getSubReport(final String subReport) {
-		try {
-			return (JasperReport) JRLoader.loadObjectFromFile(new ClassPathResource(String.format("/jasper/%s.jasper"
-					, subReport));
-		} catch (JRException e) {
-			throw new RuntimeException(e.getMessage(), e);
-		}
-	}
+//	public static JasperReport getSubReport(final String subReport) {
+//		try {
+//			return null;
+//		} catch (JRException e) {
+//			throw new RuntimeException(e.getMessage(), e);
+//		}
+//	}
 
 	private static JRDataSource buildDatasource(final Collection data) {
 		return  Objects.isNull(data) ? new JREmptyDataSource() :  new JRBeanCollectionDataSource(data);
